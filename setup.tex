@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{fullpage}
 \usepackage{graphicx}
+\usepackage{hyperref}
 
 \title{ConGenOmics 2015 Winter Session}
 \date{1/3/2015--7/3/2015}
@@ -8,10 +9,129 @@
 
 \begin{document}
 \maketitle
+
 \section*{Introduction}
+
+This document is meant to serve as a guide for installing and configuring the
+software required to carry out and build association study pipelines.  This
+guide focuses on Python 2.7.x, IPython 2.x, and R 3.x.  By following along
+with the installation procedures in this document, you will be able to 1)
+install a standalone suite of software useful for your research at your own
+institution and 2) work with the installed software at the B@G workshop.
+Additionally, this guide will focus on OS X installation and will be largely
+applicable to Linux and Unix systems, as well.  Windows users will be able to
+work with the majority of the software outlined in this document, however, not
+everything is likely to work.  Please consult with your High Performance
+Computing group, or lab mates, about getting access to a Linux or OS X system
+to carry out your analyses.
+
+\section*{R}
+
+By far the easiest way to get \texttt{R} installed is to download and install
+RStudio from \url{http://www.rstudio.com}.  For systems to which you don't
+have acess to a window system (i.e., X11), you can install R from source if it
+is not already included in your distribution.  It's important to remember that
+if you want to be able to use \texttt{R} functionality from other systems
+(e.g., Python), then you need to enable access to it as a shared library when
+you compile it.  This is done by adding a flag to the configure script,
+\texttt{--enable-R-shlib}.  By default, packages that you get from package
+managers such as \texttt{yum} and \texttt{apt}, or from
+\url{http://r-project.org} already have this capability, so don't worry about
+it.  You'll also want to make note of where \texttt{R\_HOME} is located on
+your system, as it might be required by other packages (like \texttt{rpy2}).
+
+\paragraph{Compiling R}
+If you have to compile R for yourself, and you do not have \texttt{root} access
+to your system (which is common), the following should work find, provided that
+you have the \texttt{gcc} toolchain already installed (which you should).  If
+you need a newer version for OS X, use MacPorts (\url{http://www.macports.org})
+to manage it and save yourself a lot of time and heartache.  To compile
+\texttt{R} on a system to which you do not have root access, do the following:
+
+\begin{enumerate}
+\item{Download the \texttt{R} source code from a CRAN mirror nearest you}
+\item{\texttt{tar zxvf R-3.1.2.tar.gz} (or whatever version you download)}
+\item{\texttt{cd R-3.1.2}}
+\item{\texttt{./configure --prefix=\$HOME/R3 --enable-R-shlib}}
+\item{\texttt{make}}
+\item{\texttt{make install}}
+\end{enumerate}
+
+This process will install R into your home directory and the binary will be
+located in \texttt{\$HOME/R3/bin}.  Make sure to add that to your path in your login
+script. Additionally, the value of \texttt{R\_HOME} will be, at least in this
+case, \texttt{\$HOME/R3/lib64/R}.
+
+\paragraph{Important and useful packages} You should install these packages
+which are helpful for association studies.  If you've not used \texttt{R}
+before, you can install packages by starting the \texttt{R} environment and
+entering the command \texttt{install.packages()}.
+
+\begin{itemize}
+\item{\texttt{ape}}
+\item{\texttt{phangorn}}
+\item{\texttt{lme4}}
+\item{\texttt{SNPassoc}}
+\item{\texttt{hierfstat}}
+\item{\texttt{adegenet}}
+\item{\texttt{seqinr}}
+\item{\texttt{devtools}}
+\end{itemize}
+
+One confusing thing about \texttt{R} packages is that when you install them, you
+must surround them with quotes (e.g., \texttt{install.packages("ape")}), but
+when you load them into your \texttt{R} workspace, you do not use quotes (e.g.,
+\texttt{library(ape)})
 
 \section*{Python}
 
-\section*{R}
+Installing from a scratch a new Python ecosystem can often involve myriad and
+convoluted compilation of tens to hundreds of dependencies before even getting
+to the libraries useful to your research.  To avoid this, I always recommend
+installing the Anaconda Python distribution from Continuum.  You can access
+the appropriate download for your system from
+\url{http://continuum.io/downloads}.  As an added benefit, as an active
+academic, you can get access to faster and more robust versions of some of the
+core libraries.  See \url{https://store.continuum.io/cshop/academicanaconda} for
+more information.
+
+By default, the Anaconda distribution will install to your home directory in a
+folder named \texttt{anaconda}.  I've not seen many occaisons to change this.
+Once installed, you should choose the option to add the anaconda path to your
+login scripts (e.g., .basrhc, .zshrc, etc.).  Upon logging out and in again
+(or sourcing your login script) you should be able to run the \texttt{conda} 
+command.
+
+The \texttt{conda} command is the main command that you will use to both 
+update/install software as well as create new python environments.  Conda
+environments, similar in concept to virtualenv/venv, allow you to maintain 
+project-specific python installations that contain only those libraries that 
+are required.  This aids in usability for you, package isolation for your
+software, and enables a layer of reprodicibility because you can easily 
+idenfity what python packages and their versions are in use for your project
+(via \texttt{pip freeze}).
+
+\paragraph{Installing Anaconda}
+
+Follow these steps to install and configure your own instance of Anaconda
+Python.
+
+\begin{enumerate}
+\item{Download the install script from \texttt{continuum.io}}
+\item{\texttt{sh Anaconda\_2.1...sh}}
+\item{Accept license}
+\item{Install to \texttt{$\sim$/anaconda}}
+\item{Add to install path when prompted}
+\item{Log out/in or source your login script}
+\item{Update the conda software manager: \texttt{conda update conda}}
+\item{Update the anaconda distribution: \texttt{conda update anaconda}}
+\item{Update the base install with your required pacakges: \texttt{conda
+install ipython ipython-notebook numpy scipy matplotlib pandas biopython
+statsmodels setuptools pip}}
+\item{Install other software that is not distributed with Anaconda:
+\texttt{pip install rpy2}}
+\end{enumerate}
+
+
 
 \end{document}
