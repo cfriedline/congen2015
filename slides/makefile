@@ -1,20 +1,8 @@
-PANDOC = /usr/local/bin/pandoc
-TYPE = revealjs
-THEME = WARSAW
-IN = slides.md
-COMPRESSOR = java -jar ~/Downloads/yuicompressor-2.4.8.jar
+pdf: main.tex
+	latexmk -pdf main.tex
+	open main.pdf
 
-slides: reveal.js/css/reveal.min.css reveal.js/js/reveal.min.js
-	$(PANDOC) -t $(TYPE) -s $(IN) -o $(IN).html -V theme:$(THEME)
-
-reveal.js/js/reveal.min.js:
-	cd reveal.js/js && \
-	$(COMPRESSOR) -o reveal.min.js reveal.js
-	
-reveal.js/css/reveal.min.css:
-	cd reveal.js/css %% \
-	$(COMPRESSOR) -o reveal.min.css reveal.css
-	
-
+slides.tex: slides.md
+	pandoc slides.md -t beamer -o slides.tex
 
         
