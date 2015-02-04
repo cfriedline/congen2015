@@ -1,28 +1,40 @@
-\documentclass[t]{beamer}  
-\usetheme{Frankfurt}    
+\documentclass[c]{beamer}  
+\usetheme{AnnArbor}    
 \usecolortheme[dark]{solarized}        
 \setbeamertemplate{navigation symbols}{}
-\title{Bioinformatics for Adaptation Genomics}
+\title[B@G 2015]{Bioinformatics for Adaptation Genomics}
 \subtitle{Environmental and Phenotypic Associations}
-\author{Christopher J. Friedline, Ph.D \\ Andrew J. Eckert, Ph.D.}
-\institute{Virginia Commonwealth University}
+\author[Christopher J. Friedline, Ph.D.]{Christopher J. Friedline, Ph.D \\
+Andrew J.
+Eckert, Ph.D.}
+\institute[VCU]{Virginia Commonwealth University}
 \date{March 6, 2015}
 
 
 \usepackage{graphicx}
 \usepackage{fancybox}
 \usepackage{natbib}
+\usepackage{fontspec}
+\usepackage{fontawesome}
 \bibpunct{(}{)}{,}{a}{}{;}
 
 \begin{document}
 
 \begin{frame}
 \titlepage
+\centering
+\scriptsize
+\faTwitter\ @noituloveand 
+$\cdot$ \faGithub\ cfriedline
+$\cdot$ \faGlobe\ chris.friedline.net
+$\cdot$ \faEnvelope\ cfriedline@vcu.edu\\
+\vskip 1em
+\faGlobe\ eckertlab.blogspot.com
 \end{frame}
 
 \begin{frame}
-\frametitle{Outline}
-\tableofcontents
+\frametitle{Overview}
+\tableofcontents[hideallsubsections]
 \end{frame}
 
 \include{session1}

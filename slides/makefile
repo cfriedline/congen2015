@@ -1,5 +1,5 @@
 slides:
-	latexmk -pdf slides.tex
+	latexmk -xelatex slides.tex
 	open slides.pdf
 
 .PHONY: slides
