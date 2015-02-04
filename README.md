@@ -8,7 +8,7 @@ Default TeX Live should be sufficient to build the setup document.
 
 ##To build
 
-`make` will make the setup document
+`make` (or `make setup`) will make the setup document
 
 `make slides` will make the slides
 
