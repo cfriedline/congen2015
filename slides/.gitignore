@@ -1,3 +1,4 @@
 *.nav
 *.snm
 *.key
+.ipynb_checkpoints
