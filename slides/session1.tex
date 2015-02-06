@@ -7,10 +7,8 @@ genotypes, phenotypes, and environments}
 \frametitle{Before we get started, let's set the stage for where we are}
 \begin{block}{}
 \centering
-\includegraphics[width=0.7\textwidth]{sork}
-\\
-\cite[Adapted from][]{Sork:2013tb}
-
+\includegraphics[width=0.7\textwidth]{sork}\\
+Adapted from \citet[Figure 1]{Sork:2013tb}
 \end{block}{}
 \end{frame}
 
@@ -136,7 +134,7 @@ d = G_{Aa} - \frac{G_{AA}+G_{aa}}{2}
 \item{$V_P$: Phenotypic variance ($\sigma^2_P$)}
 \item{$V_G$: Genetic variance}
 \item{$V_E$: Environmental variance}
-\item{$V_{GE}$: Genetic + environmental variance}
+\item{$V_{GE}$: Genetic*environment}
 \end{itemize}
 \end{block}
 \end{frame}
@@ -155,23 +153,44 @@ d = G_{Aa} - \frac{G_{AA}+G_{aa}}{2}
 
 \begin{frame}
 \frametitle{Additive gentic variance}
-\end{frame}
-
-\begin{frame}
-\frametitle{Dominance gentic variance}
-\end{frame}
-
-\begin{frame}
-\frametitle{Interaction gentic variance}
+\begin{block}{}
+\begin{itemize}
+\item{Contribution of these alleles to a phenotype are independent of 1) other
+genes and 2) the environment}
+\item{When multiple alleles contribute to a single phenotype (polygenic), their
+presence has a linear effect on the phenotype}
+\item{$V_A$ is the target of natural selection}
+\end{itemize}
+\end{block}{}
 \end{frame}
 
 \begin{frame}
 \frametitle{Heritability}
+\begin{block}{The Breeder's equation}
+\begin{center}
+\huge
+$R = h^2S$
+\end{center}
+\begin{itemize}
+\item[]{$R$: response to selection}
+\item[]{$h^2$: narrow sense heritability ($\frac{V_A}{V_P}$)}
+\item[]{$S$: selection coefficient}
+\end{itemize}
+\end{block}
+
+\begin{block}{Example}
+\href{http://localhost:8888/notebooks/heritability.ipynb}{heratibility.ipynb}
+\end{block}
 \end{frame}
 
+
+
 \begin{frame}
-\frametitle{Heritability}
-\begin{block}{An example}
+\frametitle{Local adaptation}
+\begin{block}{}
+\centering
+\includegraphics[width=0.75\textwidth]{salvo_fig1}\\
+Adapted from \citet[Figure 1]{Savolainen:2013dfa}
 \end{block}
 \end{frame}
 
