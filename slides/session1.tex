@@ -7,7 +7,8 @@ genotypes, phenotypes, and environments}
 \frametitle{Before we get started, let's set the stage for where we are}
 \begin{block}{}
 \centering
-\includegraphics[width=0.7\textwidth]{sork}\\
+\includegraphics[height=0.8\textheight]{sork}\\
+\tiny
 Adapted from \citet[Figure 1]{Sork:2013tb}
 \end{block}{}
 \end{frame}
@@ -18,7 +19,7 @@ Adapted from \citet[Figure 1]{Sork:2013tb}
 \begin{itemize}
 \item{A thorough review of quantitative genetics}
 \item{A thorough review of population genetics}
-\item{Derivations of any formulae}
+\item{Unnecessary derivations of any formulae}
 \item{Computer programming, systems engineering, setup, etc.}
 \end{itemize}
 \end{block}
@@ -28,6 +29,7 @@ Adapted from \citet[Figure 1]{Sork:2013tb}
 \frametitle{What I'm going to talk about (mostly)}
 \begin{block}{Instead, let's try}
 \begin{itemize}
+\item{Fixed and random effects, linear models, linear mixed models}
 \item{Enough quant/pop gen to get by}
 \item{Some basic equations}
 \item{Genetic variance partitioning}
@@ -38,6 +40,40 @@ Adapted from \citet[Figure 1]{Sork:2013tb}
 \end{block}
 \end{frame}
 
+\begin{frame}
+\frametitle{Fixed vs random effects}
+\begin{block}{Fixed effects}
+\begin{itemize}
+\item{\textbf{Treatment} effects}
+\item{Case vs. control, and \textbf{only} these two groups}
+\item{Variable for which all levels are included (e.g., gender, race)}
+\item{Explicitly compare between levels without generalizing (e.g., San
+Francisco vs. Berkeley)}
+\item{Usually qualitiative variables}
+\end{itemize}
+\end{block}
+\tiny
+\citet{StroupFreund200203}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fixed vs random effects}
+\begin{block}{Random effects}
+\begin{itemize}
+\item{Drawn from a distribution of possible effects}
+\item{San Francisco and Berkeley are just two of many western US, 
+or liberal, or hippie, or measels-infected cities}
+\item{Use of a random effect allows for more generalizable conclusions 
+from the data}
+\item{rather than comparing among levels for an effect, random 
+effects measure how much variance in the dependent variable is 
+accounted for across levels of the random factor}
+\item{Blocking, control, repeated-measures factors are random}
+\end{itemize}
+\end{block}
+\tiny
+\citet{StroupFreund200203}
+\end{frame}
 
 \begin{frame}
 \frametitle{Evoluationary quantitative genetics \citep{Walsh:2008}}
@@ -88,8 +124,6 @@ variation in the genome}
 \end{itemize}
 \end{block}
 \end{frame}
-
-
 
 \begin{frame}
 \frametitle{There is some math we need}
@@ -190,9 +224,159 @@ $R = h^2S$
 \begin{block}{}
 \centering
 \includegraphics[width=0.75\textwidth]{salvo_fig1}\\
+\tiny
 Adapted from \citet[Figure 1]{Savolainen:2013dfa}
 \end{block}
 \end{frame}
 
+\begin{frame}
+\frametitle{Methods to detect local adaptation}
+\begin{block}{Current approaches*}{}
+\begin{itemize}
+\item{QTL-mapping}
+\item{Population genetics}
+\item{Association mapping}
+\end{itemize}
+\end{block}
+\tiny
+*Adapted from \citet{Savolainen:2013dfa}
+\end{frame}
 
+\begin{frame}
+\frametitle{Methods to detect local adaptation}
+\begin{block}{QTL}
+\begin{itemize}
+\item{Can operate on a reduced set of markers (GBS: RAD, ddRAD)}
+\item{Does not require a reference genome}
+\item{Need a linkage map, large sample sizes, many crosses}
+\end{itemize}
+\end{block}
 
+\begin{block}{Popgen}
+\begin{itemize}
+\item{Diverse data sets (SNPs, microsatellites): DNA sequence variation,
+$F_{ST}$, $Q_{ST}$}
+\item{Conculsions driven by data type}
+\item{Requires a reference genome}
+\item{Normal challenges of next-gen data apply (quality filtering, redundancy,
+coverage)}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Methods to detect local adaptation}
+\begin{block}{Association Mapping}
+\begin{itemize}
+\item{Sampling from populations}
+\item{Much lower LD among loci}
+\item{Needs dense sets of markers (varies with LD and genome size)}
+\item{Must consider genetically differentiated populations, population
+structure is important!}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Association mapping in conifers}
+\begin{block}{GWAS in trees}
+\begin{itemize}
+\item{Forest trees are important economically and environmentally}
+\item{Studying them in traditional ways (i.e., QTL) is difficult: generation
+time is long, phenotype not present in seedlings (e.g, wood/bark)}
+\item{Complex demography, population structure, local adaptation can confound 
+associations}
+\item{Heritability tends to be low for traits of interest}
+\item{Mapping populations may not generalize to natural populations}
+\end{itemize}
+\end{block}
+\tiny
+\citet{Uchiyama:2013ci}
+\end{frame}
+
+\begin{frame}
+\frametitle{Association mapping in conifers}
+\begin{block}{Conifer genomes}
+\begin{itemize}
+\item{Huge: \SIrange{10}{30}{GB}}
+\item{Highy complex (repeats, gene content, GC-bias)}
+\item{Ratio of genetic to physical distance $>$\SI{3000}{kb \per cM}}
+\item{Rapid decay of LD in coding regions}
+\end{itemize}
+\end{block}
+\tiny
+\citet{Uchiyama:2013ci,Hirschhorn:2005cka}
+\end{frame}
+
+\begin{frame}
+\frametitle{Association mapping in conifers}
+\begin{block}{Identifying variants}
+Two main methods:
+\begin{itemize}
+\item{Genotyping arrays}
+\item{Gentoyping by sequencing (GBS)}
+\item{Each have own set of biases and problems}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Now that you have identified variants...}
+\begin{block}{Let's revisit what you want to do}
+\centering
+You want to understand how the variation in your biologically important and
+interesting trait is attributable to the underlying additive genetic variation 
+present (i.e., heritability) in your samples (and hopefully the population).
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Now that you have identified variants...}
+\begin{block}{}
+\centering
+\includegraphics[width=0.9\textwidth]{hirschhorn_table1}\\
+\tiny
+\citet[Table 1]{Hirschhorn:2005cka}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Testing SNPs against phenotypes}
+\begin{block}{}
+\begin{center}
+\Large{$y=X \bm{\beta} + S \bm{\alpha} + Q \bm{v} + Z \bm{u} + \bm{e}$}
+\end{center}
+\begin{itemize}
+\item{$X \beta$: fixed effects w/o SNP + population structure}
+\item{$\beta$: fixed effects other than SNP or pop. structure}
+\item{$\alpha$: vector of SNP effects}
+\item{$v$: vector of population effects}
+\item{$u$: vector of polygene background effects}
+\item{$Q$: matrix from STRUCTURE relating y to v}
+\item{$X, S, Z$: incidence matrices (0/1) relating y to $\beta$, $\alpha$, $u$,
+respectively}
+\end{itemize}
+\end{block}
+\tiny
+\citet{Yu:2006ij}
+\end{frame}
+
+\begin{frame}
+\frametitle{Testing SNPs against phenotypes}
+\begin{block}{}
+\begin{center}
+\Large{$y=X \bm{\beta} + S \bm{\alpha} + Q \bm{v} + Z \bm{u} + \bm{e}$}
+\end{center}
+\begin{itemize}
+\item{$Var(u) = 2KV_g, Var(e) = RV_R$}
+\item{$K$: $n \times n$ matrix of genetic covariance between pairs of
+individuals (kinship)}
+\item{$R$: $n \times n$ matrix off-diag elems are 0, diag is
+$1/N_{{obs}_{pheno}}$}
+\item{$V_g$: genetic variance (additive)}
+\item{$V_R$: residual variance (non-additive + env)}
+\end{itemize}
+\end{block}
+\tiny
+\citet{Yu:2006ij}
+\end{frame}

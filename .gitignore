@@ -26,3 +26,7 @@ auto
 *.fls
 *.pdf
 *.sublime*
+*.rds
+*.txt
+squat
+slides/*.R
