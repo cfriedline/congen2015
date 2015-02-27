@@ -4,6 +4,217 @@
 genotypes, phenotypes, and environments}
 
 \begin{frame}
+\frametitle{Definitions}
+\begin{block}{Local adaptation}
+\centering
+Individuals of a \textbf{local} population have higher relative fitness in 
+their \textbf{local} environment compared to individuals from other 
+environments.
+\end{block}
+
+\begin{block}{}
+\begin{itemize}
+\item{Patterns in each habitat are independent of each other}
+\item{Affected by gene flow}
+\item{Confounded by drift, temporal sampling}
+\item{Process driven by divergent selection $\longleftrightarrow$ drift}
+\end{itemize}
+\end{block}
+\tiny
+\citet{Kawecki:2004hxa}
+\end{frame}
+
+\begin{frame}
+\frametitle{Therefore, local adaptation is:}
+\Large
+\begin{block}{}
+''...patterns and processes observed across local populations of the same
+species connected, at least potentially, by dispersal and gene flow.''
+\citep{Kawecki:2004hxa}.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{And any adaptation is:}
+\Large
+\begin{block}{}
+a phenotype (or some aspect of) which increases Darwinian fitness over other 
+forms of the phenotype.
+\end{block}
+
+\begin{block}{Question}
+\centering
+What is Darwinian fitness?
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fitness}
+\begin{block}{Absolute fitness}
+\centering
+\large
+\begin{equation}
+W_{abs} = \frac{N_{after}}{N_{before}}
+\end{equation}
+\end{block}
+
+\begin{block}{Relative fitness}
+\centering
+$W_{A1,A1} = 0.75, W_{A1,A2} = 0.25, W_{A2,A2} = 0.95$
+
+\vspace{2em}
+
+$W_{A2,A2} = 1.0$\\ \vspace{1em}
+$W_{A1,A1} = \frac{0.75}{0.95} = 0.79$\\ \vspace{1em}
+$W_{A1,A2} = \frac{0.25}{0.95} = 0.26$\\ \vspace{1em}
+\tiny
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Local adaptation review}
+\begin{block}{Question}
+\large
+What happens to the genetic variance among populations in fitness-related
+traits in the presence of gene flow but no selection?
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Local adaptation review}
+\begin{block}{Questions}
+\large
+Given standing genetic variation in fitness-related traits in populations
+connected by gene flow, what can you say about: 
+\begin{enumerate}
+\item{the presence/absence of natural selection acting in the populations?}
+\item{the relationship between the trait and the environment?}
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{The genetic basis for local adaptation}
+\begin{block}{Antagonistic pleiotropy vs conditional
+neutrality}
+\centering
+\includegraphics[width=0.75\textwidth]{salvo_fig1}\\
+\tiny
+Adapted from \citet[Figure 1]{Savolainen:2013dfa}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Local adaptation}
+\begin{block}{In summary}
+\begin{itemize}
+\item{Local adaptation results from a balance between selection and gene flow
+(migration)}
+\item{Selection pressures can also vary spatially and temporally
+(recolonization/extinction)}
+\item{Phenotypic plasticity can also play a role in local adaptation}
+\end{itemize}
+\end{block}
+\tiny
+*Adapted from \citet{Savolainen:2013dfa}
+\end{frame}
+
+\begin{frame}
+\frametitle{Local adaption}
+\begin{block}{Questions}
+
+\begin{itemize}
+\item{What is the potential for a populations exhibiting highly plastic traits
+to become locally adapated?}
+\item{Can local adaptation occur when fitness only increases in each
+environment?}
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Methods to detect local adaptation}
+\begin{block}{Current approaches*}{}
+\begin{itemize}
+\item{QTL-mapping}
+\item{Population genetics}
+\item{Association mapping}
+\end{itemize}
+\end{block}
+\tiny
+*Adapted from \citet{Savolainen:2013dfa}
+\end{frame}
+
+\begin{frame}
+\frametitle{LD and marker density}
+\begin{block}{How much sequencing do you need?}
+\centering
+\includegraphics[width=0.7\textwidth]{ld_decay}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Methods to detect local adaptation}
+\begin{block}{QTL}
+\begin{itemize}
+\item{Can operate on a reduced set of markers (GBS: RAD, ddRAD)}
+\item{Does not require a reference genome}
+\item{Need a linkage map, large sample sizes, many crosses}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{QTL in \textit{Boechera stricta}}
+\begin{columns}
+
+\begin{column}{0.4\textwidth}
+\footnotesize
+\begin{block}{Flowering time}
+\begin{itemize}
+\item{Supports local adaptation due to favored native alleles at 
+both sites($\bar{\Delta} f_C = 0.016, \bar{\Delta} f_M = 
+0.048, p < 0.001$)}
+\item{2.8\% of genome is AP, 8.1\% CN}
+\item{$\sim$all AP linked to \textit{nFT}}
+\end{itemize}
+\end{block}
+
+
+\end{column}
+
+\begin{column}{0.6\textwidth}
+\centering
+\includegraphics[width=0.9\textwidth]{boechera.png}\\
+\tiny
+Adapted from \citet[Figure 1]{Anderson:2012cb}
+
+\end{column}
+
+	
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{QTL in \textit{Boechera stricta}}
+\begin{block}{\textit{nFT QTL $\times$ E}}
+\centering
+\includegraphics[width=0.7\textwidth]{boechera2.png}\\
+\tiny
+Adapted from \citet[Figure 3]{Anderson:2012cb}
+\end{block}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
 \frametitle{Before we get started, let's set the stage for where we are}
 \begin{block}{}
 \centering
@@ -14,69 +225,7 @@ Adapted from \citet[Figure 1]{Sork:2013tb}
 \end{frame}
 
 \begin{frame}
-\frametitle{What I'm not going to talk about (mostly)}
-\begin{block}{Let's avoid}
-\begin{itemize}
-\item{A thorough review of quantitative genetics}
-\item{A thorough review of population genetics}
-\item{Unnecessary derivations of any formulae}
-\item{Computer programming, systems engineering, setup, etc.}
-\end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{What I'm going to talk about (mostly)}
-\begin{block}{Instead, let's try}
-\begin{itemize}
-\item{Fixed and random effects, linear models, linear mixed models}
-\item{Enough quant/pop gen to get by}
-\item{Some basic equations}
-\item{Genetic variance partitioning}
-\item{Some experimental design decisions}
-\item{Data types, methods and tools}
-\item{Experiments in both natural and transplant populations}
-\end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Fixed vs random effects}
-\begin{block}{Fixed effects}
-\begin{itemize}
-\item{\textbf{Treatment} effects}
-\item{Case vs. control, and \textbf{only} these two groups}
-\item{Variable for which all levels are included (e.g., gender, race)}
-\item{Explicitly compare between levels without generalizing (e.g., San
-Francisco vs. Berkeley)}
-\item{Usually qualitiative variables}
-\end{itemize}
-\end{block}
-\tiny
-\citet{StroupFreund200203}
-\end{frame}
-
-\begin{frame}
-\frametitle{Fixed vs random effects}
-\begin{block}{Random effects}
-\begin{itemize}
-\item{Drawn from a distribution of possible effects}
-\item{San Francisco and Berkeley are just two of many western US, 
-or liberal, or hippie, or measels-infected cities}
-\item{Use of a random effect allows for more generalizable conclusions 
-from the data}
-\item{rather than comparing among levels for an effect, random 
-effects measure how much variance in the dependent variable is 
-accounted for across levels of the random factor}
-\item{Blocking, control, repeated-measures factors are random}
-\end{itemize}
-\end{block}
-\tiny
-\citet{StroupFreund200203}
-\end{frame}
-
-\begin{frame}
-\frametitle{Evoluationary quantitative genetics \citep{Walsh:2008}}
+\frametitle{Evoluationary quantitative genetics}
 \begin{block}{Goals}
 \begin{itemize}
 \item{Understand the genetics and inheritance of complex traits}
@@ -84,7 +233,6 @@ accounted for across levels of the random factor}
 \item{Natural populations}
 \end{itemize}
 \end{block}
-
 
 \begin{block}{Natural selection}
 \begin{itemize}
@@ -94,6 +242,8 @@ accounted for across levels of the random factor}
 \item{Additive genetic variation}
 \end{itemize}
 \end{block}
+\tiny
+\citet{Walsh:2008}
 \end{frame}
 
 \begin{frame}
@@ -112,7 +262,7 @@ accounted for across levels of the random factor}
 \begin{frame}
 \frametitle{There are several things we'd like to do with our data}
 
-\begin{block}{Genetic architecture}
+\begin{block}{Genetic architecture}cde
 \begin{itemize}
 \item{Ascertain a meaningful set of genetic variants which sufficient
 discriminatory power}
@@ -219,39 +369,9 @@ $R = h^2S$
 
 
 
-\begin{frame}
-\frametitle{Local adaptation}
-\begin{block}{}
-\centering
-\includegraphics[width=0.75\textwidth]{salvo_fig1}\\
-\tiny
-Adapted from \citet[Figure 1]{Savolainen:2013dfa}
-\end{block}
-\end{frame}
+
 
 \begin{frame}
-\frametitle{Methods to detect local adaptation}
-\begin{block}{Current approaches*}{}
-\begin{itemize}
-\item{QTL-mapping}
-\item{Population genetics}
-\item{Association mapping}
-\end{itemize}
-\end{block}
-\tiny
-*Adapted from \citet{Savolainen:2013dfa}
-\end{frame}
-
-\begin{frame}
-\frametitle{Methods to detect local adaptation}
-\begin{block}{QTL}
-\begin{itemize}
-\item{Can operate on a reduced set of markers (GBS: RAD, ddRAD)}
-\item{Does not require a reference genome}
-\item{Need a linkage map, large sample sizes, many crosses}
-\end{itemize}
-\end{block}
-
 \begin{block}{Popgen}
 \begin{itemize}
 \item{Diverse data sets (SNPs, microsatellites): DNA sequence variation,
@@ -330,53 +450,3 @@ present (i.e., heritability) in your samples (and hopefully the population).
 \end{block}
 \end{frame}
 
-\begin{frame}
-\frametitle{Now that you have identified variants...}
-\begin{block}{}
-\centering
-\includegraphics[width=0.9\textwidth]{hirschhorn_table1}\\
-\tiny
-\citet[Table 1]{Hirschhorn:2005cka}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Testing SNPs against phenotypes}
-\begin{block}{}
-\begin{center}
-\Large{$y=X \bm{\beta} + S \bm{\alpha} + Q \bm{v} + Z \bm{u} + \bm{e}$}
-\end{center}
-\begin{itemize}
-\item{$X \beta$: fixed effects w/o SNP + population structure}
-\item{$\beta$: fixed effects other than SNP or pop. structure}
-\item{$\alpha$: vector of SNP effects}
-\item{$v$: vector of population effects}
-\item{$u$: vector of polygene background effects}
-\item{$Q$: matrix from STRUCTURE relating y to v}
-\item{$X, S, Z$: incidence matrices (0/1) relating y to $\beta$, $\alpha$, $u$,
-respectively}
-\end{itemize}
-\end{block}
-\tiny
-\citet{Yu:2006ij}
-\end{frame}
-
-\begin{frame}
-\frametitle{Testing SNPs against phenotypes}
-\begin{block}{}
-\begin{center}
-\Large{$y=X \bm{\beta} + S \bm{\alpha} + Q \bm{v} + Z \bm{u} + \bm{e}$}
-\end{center}
-\begin{itemize}
-\item{$Var(u) = 2KV_g, Var(e) = RV_R$}
-\item{$K$: $n \times n$ matrix of genetic covariance between pairs of
-individuals (kinship)}
-\item{$R$: $n \times n$ matrix off-diag elems are 0, diag is
-$1/N_{{obs}_{pheno}}$}
-\item{$V_g$: genetic variance (additive)}
-\item{$V_R$: residual variance (non-additive + env)}
-\end{itemize}
-\end{block}
-\tiny
-\citet{Yu:2006ij}
-\end{frame}
