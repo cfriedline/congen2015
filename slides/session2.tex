@@ -122,6 +122,23 @@ $1/N_{{obs}_{pheno}}$}
 \begin{frame}
 \frametitle{Bayenv: identifying correlations with ecological
 variables}
+\begin{block}{Basic Bayesian}
+\begin{equation}
+P(H | D) = \frac{P(D|H)P(H)}{P(D)}	
+\end{equation}
+\begin{equation}
+P(H|D) \propto P(D|H)P(H)
+\end{equation}
+\begin{equation}
+\frac{P(H_1|D)}{P(H_0|D)}
+\end{equation}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Bayenv: identifying correlations with ecological
+variables}
 \begin{block}{Comparing allele frequencies and the environment}
 \begin{itemize}
 \item{Given different environments, local adaptation should drive changes in
@@ -179,16 +196,33 @@ x_{kl} = g(\theta_{kl}) = \begin{cases}
 \end{cases}	
 \end{equation}
 \item{Point masses at 0 and 1 represent loss or gain, $\theta_l$ are MVN}
-
 \begin{equation}
 	P(\theta_l|\Omega, \epsilon_l) \sim
  N(\epsilon_l,\epsilon_l(1-\epsilon_l)\Omega)
 \end{equation}
-
 \end{enumerate}
-
 \end{block}
 \end{frame}
+
+
+\begin{frame}
+\frametitle{Bayenv: identifying correlations with ecological
+variables}
+\begin{block}{The method}
+\begin{itemize}
+\item{The joint posterior of $\Omega$ at a single locus is:}
+\begin{equation}
+P(\theta_1, \Omega, \epsilon_l | 
+\bm{n}_1, \bm{m}_1) \propto \bm{n}_l,\bm{m}_l | x_l = g(\theta_l))
+P(\theta_l | \Omega,\epsilon_l)P(\epsilon_l)P(\Omega)	
+\end{equation}
+\item{This is the null model of SNP frequencies across populations}
+\item{Given this model, how are allele frequencies at SNPs correlated with 
+the environmental variable(s), $Y$?}
+\end{itemize}
+\end{block}
+\end{frame}
+
 
 \begin{frame}
 \frametitle{Bayenv: identifying correlations with ecological
@@ -196,7 +230,6 @@ variables}
 \begin{block}{The method}
 \begin{itemize}
 \item{The joint posterior of $\Omega$ over all loci is:}
-
 \begin{multline}
 P(\Omega, \theta_1, \ldots , \theta_l, 
 \epsilon_1, \ldots , \epsilon_L | 
@@ -205,14 +238,233 @@ P(\Omega, \theta_1, \ldots , \theta_l,
 P(\theta_l | \Omega,\epsilon_l)P(\epsilon_l)
 \right \}P(\Omega)	
 \end{multline}
-
 \item{This is the null model of SNP frequencies across populations}
 \item{Given this model, how are allele frequencies at SNPs correlated with 
 the environmental variable(s), $Y$?}
-
 \end{itemize}
 \end{block}
 \end{frame}
+
+\begin{frame}
+\frametitle{Bayenv: identifying correlations with ecological
+variables}
+\begin{block}{Alternative model}
+\begin{itemize}
+\item{Is $\theta_l$, the (surrogate) allele frequency at locus $l$, dependent
+on $Y$?}
+\item{Does $\theta_l$ deviate from $\epsilon_l$, the ancestral allele
+frequency, that is \textbf{linearly} $\propto$ $Y$ with coefficient $\beta$}
+\begin{equation}
+P(\theta_l | \Omega, \epsilon_l, \beta) \sim 
+N(\epsilon_l + \beta Y, \epsilon_l(1-\epsilon_l)\Omega)	
+\end{equation}
+\item{Note that this linear relationship is between $\theta_l$ and $Y$ and not
+between $\bm{x}_l$ and Y}
+\item{There is also a prior on $\beta$}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Bayenv: identifying correlations with ecological
+variables}
+\begin{block}{Estimation of the posterior}
+\begin{itemize}
+\item{Done for each locus}
+\begin{multline}
+P(\theta_1, \Omega, \epsilon_l, \beta | 
+\bm{n}_1, \bm{m}_1) \propto \\
+P(\bm{n}_l,\bm{m}_l | \bm{x}_l = g(\theta_l))
+P(\theta_l | \Omega,\epsilon_l,\beta)P(\epsilon_l)P(\Omega)P(\beta)	
+\end{multline}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Bayenv: identifying correlations with ecological
+variables}
+\begin{block}{Standardizing allele frequencies with Bayenv2}
+\begin{itemize}
+\item{Standardizing for unequal sampling variance and covariance 
+among populations}
+\begin{equation}
+X_l = C^-1 \frac{(\theta_l-\epsilon_l)}{\sqrt(\epsilon_l(1-\epsilon_l))}	
+\end{equation}
+\item{Can be used to formulate a statistic that's like $F_ST$}
+\begin{equation}
+Var(X_l) = X_l^T X_l =
+\frac{(\theta_l-\epsilon)^T\Omega^{-1}(\theta_l-\epsilon)}
+{\epsilon(1-\epsilon)} \sim 
+\frac{Var(p_{lj})}{\epsilon_l(1-\epsilon_l)}
+\end{equation}
+\item{$X^TX$ can be thought of as $F_{ST}$ that accounts for
+variance-covariance among populations}
+\item{Does $X^TX$ deviate from MVN $\longrightarrow$ selection}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{}
+\begin{block}{Bayenv: identifying correlations with ecological
+variables}
+\centering
+\includegraphics[width=0.8\textwidth]{xtx.png}\\
+\tiny
+\citet[Figure 2]{Gunther:2013ik}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Bayenv: identifying correlations with ecological
+variables}
+\begin{block}{Input}
+\centering
+\begin{itemize}
+\item{Allele counts}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{bayenv_in1.png}	
+\end{center}
+
+\item{Environmental variables}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{bayenv_in2.png}	
+\end{center}
+\end{itemize}
+\end{block}
+\begin{block}{Question}
+Do you notice a relationship between rows 0--1 and 2--3?
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Bayenv: identifying correlations with ecological
+variables}
+\begin{block}{Output}
+\centering
+\includegraphics[width=0.8\textwidth]{bayenv_out1.png}
+\end{block}
+\begin{block}{Question}
+Why are there 12 columns when we only input 4 environmental variables?
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Bayenv: identifying correlations with ecological
+variables}
+\begin{block}{Bayes factor outliers}
+\centering
+\includegraphics[height=0.6\textheight]{bayenv_outlier.png}
+\end{block}
+\begin{block}{Question}
+How big must an outlier be? \citep{Kass:1995vb}.
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Signatures of polygenic adaptation}
+\begin{block}{}
+\centering
+\includegraphics[height=.8\textheight]{bc1.png}
+\end{block}
+\tiny
+\citet[Figure 1]{Berg:2014bs}
+\end{frame}
+
+\begin{frame}
+\frametitle{Signatures of polygenic adaptation}
+\begin{block}{}
+\centering
+We will not be going through all of these equations
+\end{block}
+\tiny
+\citet[Figure 1]{Berg:2014bs}
+\end{frame}
+
+\begin{frame}
+\frametitle{Signatures of polygenic adaptation}
+\begin{block}{}
+\centering
+But...
+\end{block}
+\tiny
+\citet[Figure 1]{Berg:2014bs}
+\end{frame}
+
+\begin{frame}
+\frametitle{Signatures of polygenic adaptation}
+\begin{block}{We need to calculate some values, such as $\alpha$ and $p$}
+\centering
+\begin{itemize}
+\item{SNPassoc $\longrightarrow \alpha$}
+\item{hierfstat $\longrightarrow p$}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{}
+\begin{block}{Before we get to that, let's revisit what this method does}
+\begin{itemize}
+\item{The null hypothesis, unsuprisingly, is neutrality}
+\item{So we can ask whether the values we observe support a role for selection,
+taking into account drift and shared ancestry}
+\item{Data are allele frequencies, estimates of effect size at each locus}
+\item{Shared ancestry and drift are accounted for in the models}
+\item{The addition of environmental variables allows testing for local
+adaptation}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{}
+\begin{block}{Qx}
+Represents the variance of genetic values among populations that are not
+explained by drift/demography
+\begin{itemize}
+\item{$\uparrow Qx$: excess of variance among populations (directional
+selection/local adaptation)}
+\item{$\downarrow Qx$: lack of variance among populations (stabilizing
+selection)}
+\end{itemize}
+
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Signatures of polygenic adaptation*}
+\begin{block}{Calculating alpha, given p and q}
+\centering
+\begin{equation}
+a = \frac{G_{AA} - G_{aa}}{2}	
+\end{equation}
+\begin{equation}
+d = G_{Aa} - \frac{G_{AA}+G{aa}}{2}	
+\end{equation}
+\begin{equation}
+\alpha_A = a_A + d_A(q-p)	
+\end{equation}
+\end{block}
+\tiny
+\citet{Cheverud:2015tc}
+\normalsize
+\begin{block}{Question}
+How many genotypic classes are represented  $a$ and $d$?
+\end{block}
+
+\end{frame}
+
+
+
+
 
 
 
