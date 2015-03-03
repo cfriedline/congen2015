@@ -1,10 +1,15 @@
-setup:
-	latexmk -pdf setup.tex
-	open setup.pdf
-
-all: setup slides
-
 slides:
-	cd slides && make
+	rm slides.pdf
+	latexmk -xelatex slides.tex
+	open slides.pdf
 
-.PHONY: setup all slides
+texpad:
+	rm slides.pdf
+	latexmk -xelatex slides.tex
+
+scp_notebooks:
+	scp congen:~/ipython/*.ipynb .
+
+.PHONY: slides
+
+        
