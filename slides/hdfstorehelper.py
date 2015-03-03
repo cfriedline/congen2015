@@ -46,5 +46,11 @@ class HDFStoreHelper:
         s.close()
         return children
 
+    def get_keys(self):
+        s = HDFStore(self.path)
+        keys = s.keys()
+        s.close() 
+        return keys
+
  
  
