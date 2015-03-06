@@ -1,6 +1,6 @@
 %!TEX root = slides.tex
 
-\section[Session 1]{Session 1: Evolutionary genetics of associations among
+\section[Part 1]{Part 1: Evolutionary genetics of associations among
 genotypes, phenotypes, and environments}
 
 \begin{frame}
@@ -24,74 +24,6 @@ environments.
 \citet{Kawecki:2004hxa}
 \end{frame}
 
-\begin{frame}
-\frametitle{Therefore, local adaptation is:}
-\Large
-\begin{block}{}
-''...patterns and processes observed across local populations of the same
-species connected, at least potentially, by dispersal and gene flow.''
-\citep{Kawecki:2004hxa}.
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{And any adaptation is:}
-\Large
-\begin{block}{}
-a phenotype (or some aspect of) which increases Darwinian fitness over other 
-forms of the phenotype.
-\end{block}
-
-\begin{block}{Question}
-\centering
-What is Darwinian fitness?
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Fitness}
-\begin{block}{Absolute fitness}
-\centering
-\large
-\begin{equation}
-W_{abs} = \frac{N_{after}}{N_{before}}
-\end{equation}
-\end{block}
-
-\begin{block}{Relative fitness}
-\centering
-$W_{A1,A1} = 0.75, W_{A1,A2} = 0.25, W_{A2,A2} = 0.95$
-
-\vspace{2em}
-
-$W_{A2,A2} = 1.0$\\ \vspace{1em}
-$W_{A1,A1} = \frac{0.75}{0.95} = 0.79$\\ \vspace{1em}
-$W_{A1,A2} = \frac{0.25}{0.95} = 0.26$\\ \vspace{1em}
-\tiny
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Local adaptation review}
-\begin{block}{Question}
-\large
-What happens to the genetic variance among populations in fitness-related
-traits in the presence of gene flow but no selection?
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Local adaptation review}
-\begin{block}{Questions}
-\large
-Given standing genetic variation in fitness-related traits in populations
-connected by gene flow, what can you say about: 
-\begin{enumerate}
-\item{the presence/absence of natural selection acting in the populations?}
-\item{the relationship between the trait and the environment?}
-\end{enumerate}
-\end{block}
-\end{frame}
 
 \begin{frame}
 \frametitle{The genetic basis for local adaptation}
@@ -104,6 +36,58 @@ Adapted from \citet[Figure 1]{Savolainen:2013dfa}
 \end{block}
 \end{frame}
 
+
+\begin{frame}
+\frametitle{The genetic basis for local adaptation}
+\begin{block}{Antagonistic pleiotropy vs conditional
+neutrality}
+\begin{itemize}
+\item{AP can maintain genetic variation because of differential fitness of
+loci across environments}
+\item{Why hasn't AP been detected more and why is CN so abundant in the
+literature?}
+\end{itemize}
+\end{block}
+\tiny
+\citet{MitchellOlds:2007di, Anderson:2012cb}
+\end{frame}
+
+\begin{frame}
+\frametitle{The genetic basis for local adaptation}
+\begin{block}{Is the lack of reported AP real?}
+\begin{itemize}
+\item{Alleles from different environments which are conditionally 
+beneficial at distinct loci + levels of gene flow are low, then 
+CN can contribute to LA}
+\item{With gene flow recombination could create generalist 
+genotypes rather than locally adapted ones}
+\item{Evidence supporting CN vs AP might not be biologically based}
+\end{itemize}
+\end{block}
+\tiny
+\citet{MitchellOlds:2007di, Anderson:2012cb}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{The genetic basis for local adaptation}
+\begin{block}{Is the lack of reported AP real?}
+\begin{itemize}
+\item{Detecting tradeoffs requires large statistical power to detect
+significant fitness advantage of local alleles in 2 or more environments, 
+and most studies are small}
+\item{CN just may be more detectable in artificial environments b/c trade-offs
+just don't happen as much as in nature}
+\item{Detection of AP all but requires large field studies and careful sample
+design to measure effects of local alleles across environments}
+\item{Most ecologically relevant traits appear polygenic with many loci 
+each having small $\alpha$}
+\end{itemize}
+\end{block}
+\tiny
+\citet{MitchellOlds:2007di, Anderson:2012cb}
+\end{frame}
+
 \begin{frame}
 \frametitle{Local adaptation}
 \begin{block}{In summary}
@@ -112,27 +96,13 @@ Adapted from \citet[Figure 1]{Savolainen:2013dfa}
 (migration)}
 \item{Selection pressures can also vary spatially and temporally
 (recolonization/extinction)}
-\item{Phenotypic plasticity can also play a role in local adaptation}
+\item{Phenotypic plasticity can also play a role in local adaptation, but
+tough to study in trees}
 \end{itemize}
 \end{block}
 \tiny
 *Adapted from \citet{Savolainen:2013dfa}
 \end{frame}
-
-\begin{frame}
-\frametitle{Local adaption}
-\begin{block}{Questions}
-
-\begin{itemize}
-\item{What is the potential for a populations exhibiting highly plastic traits
-to become locally adapated?}
-\item{Can local adaptation occur when fitness only increases in each
-environment?}
-\end{itemize}
-\end{block}
-\end{frame}
-
-
 
 \begin{frame}
 \frametitle{Methods to detect local adaptation}
@@ -169,8 +139,45 @@ environment?}
 
 \begin{frame}
 \frametitle{QTL in \textit{Boechera stricta}}
-\begin{columns}
+\begin{block}{Method to distinguish between AP and CN}
+\begin{itemize}
+\item{Investigate LA, ID targets of selection}
+\item{Evaluates $\Delta$ in AF after selection}
+\item{Using 177 $\text{F}_6$ RIL of \textit{B. stricta} and parental lines}
+\item{Permutation approach, \texttt{CNAP}, using null distribution of
+$\Delta_{AF}$ for all markers in all environments such that genotype is 
+not related to fitness*}
+\end{itemize}
+\end{block}
+\tiny
+* Available from Corresponding author\\
+\citet{Anderson:2012cb}
+\end{frame}
 
+\begin{frame}
+\frametitle{QTL in \textit{Boechera stricta}}
+\begin{block}{Experimental design}
+\begin{itemize}
+\item{Field sites in MT and CO}
+\item{Relatively undisturbed, vary in elevation, latitude, precipitation and 
+temperature}
+\item{Signatures of selection along ecological gradients}
+\item{Previous work shows substantial divergence MT and CO groups}
+\item{$\text{\mars}_{\text{MT}} \times \text{\female}_{\text{CO}}$, planted in
+both locations}
+\item{Measured number of flowers across two growing seasons}
+\end{itemize}
+\end{block}
+\tiny
+\citet{Anderson:2012cb}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{QTL in \textit{Boechera stricta}}
+\begin{columns}
 \begin{column}{0.4\textwidth}
 \footnotesize
 \begin{block}{Flowering time}
@@ -182,16 +189,12 @@ both sites($\bar{\Delta} f_C = 0.016, \bar{\Delta} f_M =
 \item{$\sim$all AP linked to \textit{nFT}}
 \end{itemize}
 \end{block}
-
-
 \end{column}
-
 \begin{column}{0.6\textwidth}
 \centering
 \includegraphics[width=0.9\textwidth]{boechera.png}\\
 \tiny
 Adapted from \citet[Figure 1]{Anderson:2012cb}
-
 \end{column}
 
 	
@@ -209,13 +212,97 @@ Adapted from \citet[Figure 3]{Anderson:2012cb}
 \end{block}
 \end{frame}
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Methods to detect local adaptation}
+\begin{block}{Population genetics}
+\begin{itemize}
+\item{Diverse data sets (SNPs, microsatellites): DNA sequence variation,
+$F_{ST}$, $Q_{ST}$}
+\item{Conculsions driven by data type}
+\item{Requires a reference genome}
+\item{Normal challenges of next-gen data apply (quality filtering, redundancy,
+coverage)}
+\end{itemize}
+\end{block}
+\end{frame}
 
 
 \begin{frame}
-\frametitle{Before we get started, let's set the stage for where we are}
+\frametitle{Methods to detect local adaptation}
+\begin{block}{Association Mapping}
+\begin{itemize}
+\item{Marker density depends on LD decay $\uparrow$ LD decay $\rightarrow$
+$\uparrow$ marker density}
+\item{$\downarrow$ LD  $\rightarrow$ $\uparrow$ marker density}
+\item{Rare SNPs may be missed with small sample sizes}
+\item{Genomic or exonic; careful when genome size is $\uparrow$ and LD is
+$\downarrow$}
+\end{itemize}
+
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Methods to detect local adaptation}
+\begin{block}{Association Genetics in Douglas Fir \citep{Eckert:2009hha}}
+\begin{itemize}
+\item{384 SNPs (117 candidate genes), 21 cold-hardiness traits}
+\item{Cold-hardiness also synchronized with photoperiod and temperature}
+\item{adaptive genetic diversity segregates along environmental gradients}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Methods to detect local adaptation}
+\begin{block}{Cold-hardiness traits}
+\centering
+\includegraphics[height=0.8\textheight]{eckert2.png}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Methods to detect local adaptation}
+\begin{block}{}
+\begin{centering}
+\includegraphics[height=0.5\textheight]{dougfir.jpg}
+\hspace{1em}
+\includegraphics[width=0.45\textwidth]{eckert1.png}
+\end{centering}
+\begin{itemize}
+\item{Haploid tissue sampling (10 megs/tree)}
+\item{GoldenGate SNP array}
+\item{\citet{Yu:2006ij, Storey:2003wo}, $\text{AMOVA}_{hier}$, Tassel}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Methods to detect local adaptation}
+\begin{block}{Results}
+\begin{itemize}
+\item{Low population structure ($G_{ST} \sim 0.02--0.07$), $Q$-matrix of k=15
+from STRUCTURE}
+\item{455 (p < 0.05); 30 (q < 0.1); of the 30, 15 unique SNPs from 12
+candidate genes, affecting 10 different traits}
+\item{Growth/resource: 4 associations in 4 genes}
+\item{Phenology/cold-tolerance: 18 assoc, 11 unique snps, 10 candidate genes. 
+Man of these were non-additive}
+\item{Multivariate phenotypes: PC1 $\sim$ 44.8\%;  PC1 =
+growth+phenology+cold-tolerance, PC2 = cold damage}
+\item{individual SNPs only account for small \% of phenotypic variance}
+\item{Most of genes with significant associates to at least one trait (n =
+13) have action other than codominance.}
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Evolutionary quantitative genetics}
 \begin{block}{}
 \centering
 \includegraphics[height=0.8\textheight]{sork}\\
@@ -225,7 +312,7 @@ Adapted from \citet[Figure 1]{Sork:2013tb}
 \end{frame}
 
 \begin{frame}
-\frametitle{Evoluationary quantitative genetics}
+\frametitle{Evolutionary quantitative genetics}
 \begin{block}{Goals}
 \begin{itemize}
 \item{Understand the genetics and inheritance of complex traits}
@@ -262,7 +349,7 @@ Adapted from \citet[Figure 1]{Sork:2013tb}
 \begin{frame}
 \frametitle{There are several things we'd like to do with our data}
 
-\begin{block}{Genetic architecture}cde
+\begin{block}{Genetic architecture}
 \begin{itemize}
 \item{Ascertain a meaningful set of genetic variants which sufficient
 discriminatory power}
@@ -371,18 +458,6 @@ $R = h^2S$
 
 
 
-\begin{frame}
-\begin{block}{Popgen}
-\begin{itemize}
-\item{Diverse data sets (SNPs, microsatellites): DNA sequence variation,
-$F_{ST}$, $Q_{ST}$}
-\item{Conculsions driven by data type}
-\item{Requires a reference genome}
-\item{Normal challenges of next-gen data apply (quality filtering, redundancy,
-coverage)}
-\end{itemize}
-\end{block}
-\end{frame}
 
 \begin{frame}
 \frametitle{Methods to detect local adaptation}

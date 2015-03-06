@@ -3,7 +3,7 @@
 \headcommand {\beamer@framepages {1}{1}}
 \headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
 \headcommand {\beamer@framepages {2}{2}}
-\headcommand {\sectionentry {1}{Session 1}{3}{Session 1: Evolutionary genetics of associations among genotypes, phenotypes, and environments}{0}}
+\headcommand {\sectionentry {1}{Part 1}{3}{Part 1: Evolutionary genetics of associations among genotypes, phenotypes, and environments}{0}}
 \headcommand {\beamer@sectionpages {1}{2}}
 \headcommand {\beamer@subsectionpages {1}{2}}
 \headcommand {\slideentry {1}{0}{3}{3/3}{}{0}}
@@ -64,17 +64,17 @@
 \headcommand {\beamer@framepages {30}{30}}
 \headcommand {\slideentry {1}{0}{31}{31/31}{}{0}}
 \headcommand {\beamer@framepages {31}{31}}
-\headcommand {\sectionentry {2}{Session 2}{32}{Session 2: Empirical methods with which to detect environmental and phenotypic associations: single and multiple locus methodologies}{0}}
-\headcommand {\beamer@sectionpages {3}{31}}
-\headcommand {\beamer@subsectionpages {3}{31}}
-\headcommand {\slideentry {2}{0}{32}{32/32}{}{0}}
+\headcommand {\slideentry {1}{0}{32}{32/32}{}{0}}
 \headcommand {\beamer@framepages {32}{32}}
-\headcommand {\slideentry {2}{0}{33}{33/33}{}{0}}
+\headcommand {\slideentry {1}{0}{33}{33/33}{}{0}}
 \headcommand {\beamer@framepages {33}{33}}
-\headcommand {\slideentry {2}{0}{34}{34/34}{}{0}}
+\headcommand {\slideentry {1}{0}{34}{34/34}{}{0}}
 \headcommand {\beamer@framepages {34}{34}}
-\headcommand {\slideentry {2}{0}{35}{35/35}{}{0}}
+\headcommand {\slideentry {1}{0}{35}{35/35}{}{0}}
 \headcommand {\beamer@framepages {35}{35}}
+\headcommand {\sectionentry {2}{Part 2}{36}{Part 2: Empirical methods with which to detect environmental and phenotypic associations: single and multiple locus methodologies}{0}}
+\headcommand {\beamer@sectionpages {3}{35}}
+\headcommand {\beamer@subsectionpages {3}{35}}
 \headcommand {\slideentry {2}{0}{36}{36/36}{}{0}}
 \headcommand {\beamer@framepages {36}{36}}
 \headcommand {\slideentry {2}{0}{37}{37/37}{}{0}}
@@ -123,18 +123,30 @@
 \headcommand {\beamer@framepages {58}{58}}
 \headcommand {\slideentry {2}{0}{59}{59/59}{}{0}}
 \headcommand {\beamer@framepages {59}{59}}
-\headcommand {\sectionentry {3}{Session 3}{60}{Session 3: Analysis of single nucleotide polymorphism datasets for the detection of associations in non-model species}{0}}
-\headcommand {\beamer@sectionpages {32}{59}}
-\headcommand {\beamer@subsectionpages {32}{59}}
-\headcommand {\sectionentry {4}{\translate {References}}{60}{\translate {References}}{0}}
-\headcommand {\beamer@sectionpages {60}{59}}
-\headcommand {\beamer@subsectionpages {60}{59}}
-\headcommand {\slideentry {4}{0}{60}{60/60}{}{0}}
+\headcommand {\slideentry {2}{0}{60}{60/60}{}{0}}
 \headcommand {\beamer@framepages {60}{60}}
-\headcommand {\slideentry {4}{0}{60}{60/61}{}{0}}
-\headcommand {\beamer@framepages {60}{61}}
-\headcommand {\beamer@partpages {1}{61}}
-\headcommand {\beamer@subsectionpages {60}{61}}
-\headcommand {\beamer@sectionpages {60}{61}}
-\headcommand {\beamer@documentpages {61}}
-\headcommand {\def \inserttotalframenumber {61}}
+\headcommand {\slideentry {2}{0}{61}{61/61}{}{0}}
+\headcommand {\beamer@framepages {61}{61}}
+\headcommand {\slideentry {2}{0}{62}{62/62}{}{0}}
+\headcommand {\beamer@framepages {62}{62}}
+\headcommand {\slideentry {2}{0}{63}{63/63}{}{0}}
+\headcommand {\beamer@framepages {63}{63}}
+\headcommand {\slideentry {2}{0}{64}{64/64}{}{0}}
+\headcommand {\beamer@framepages {64}{64}}
+\headcommand {\sectionentry {3}{Part 3}{65}{Part 3: Analysis of a single nucleotide polymorphism dataset for the detection of associations in non-model species}{0}}
+\headcommand {\beamer@sectionpages {36}{64}}
+\headcommand {\beamer@subsectionpages {36}{64}}
+\headcommand {\sectionentry {4}{\translate {References}}{65}{\translate {References}}{0}}
+\headcommand {\beamer@sectionpages {65}{64}}
+\headcommand {\beamer@subsectionpages {65}{64}}
+\headcommand {\slideentry {4}{0}{65}{65/65}{}{0}}
+\headcommand {\beamer@framepages {65}{65}}
+\headcommand {\slideentry {4}{0}{65}{65/66}{}{0}}
+\headcommand {\beamer@framepages {65}{66}}
+\headcommand {\slideentry {4}{0}{65}{65/67}{}{0}}
+\headcommand {\beamer@framepages {65}{67}}
+\headcommand {\beamer@partpages {1}{67}}
+\headcommand {\beamer@subsectionpages {65}{67}}
+\headcommand {\beamer@sectionpages {65}{67}}
+\headcommand {\beamer@documentpages {67}}
+\headcommand {\def \inserttotalframenumber {67}}

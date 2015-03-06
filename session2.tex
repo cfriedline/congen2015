@@ -1,6 +1,6 @@
 %!TEX root = slides.tex
 
-\section[Session 2]{Session 2: Empirical methods with which to detect
+\section[Part 2]{Part 2: Empirical methods with which to detect
 environmental and phenotypic associations: single and multiple locus
 methodologies}
 
@@ -30,7 +30,7 @@ Francisco vs. Berkeley)}
 or liberal, or hippie, or measels-infected cities}
 \item{Use of a random effect allows for more generalizable conclusions 
 from the data}
-\item{rather than comparing among levels for an effect, random 
+\item{Rather than comparing among levels for an effect, random 
 effects measure how much variance in the dependent variable is 
 accounted for across levels of the random factor}
 \item{Blocking, control, repeated-measures factors are random}
@@ -39,8 +39,6 @@ accounted for across levels of the random factor}
 \tiny
 \citet{StroupFreund200203}
 \end{frame}
-
-
 
 \begin{frame}
 \frametitle{Detecting and dealing with population structure}
@@ -63,7 +61,7 @@ accounted for across levels of the random factor}
 \begin{itemize}
 	\item Bonferroni
 	\item Bootstrapping
-	\item FDR
+	\item FDR and q-value \citep{Storey:2003wo, BENJAMINI:1995ws}
 \end{itemize}
 \end{block}
 \end{frame}
@@ -73,6 +71,16 @@ accounted for across levels of the random factor}
 \begin{block}{}
 \centering
 \includegraphics[height=0.8\textheight]{price.png}\\
+\tiny
+\citet[Figure 1]{Price:2006cd}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Detecting and dealing with population structure}
+\begin{block}{}
+\centering
+\includegraphics[height=0.8\textheight]{price_rot.png}\\
 \tiny
 \citet[Figure 1]{Price:2006cd}
 \end{block}
@@ -118,6 +126,26 @@ $1/N_{{obs}_{pheno}}$}
 \tiny
 \citet{Yu:2006ij}
 \end{frame}
+
+\begin{frame}
+\frametitle{Testing SNPs against phenotypes}
+\begin{block}{Protocol}
+\begin{enumerate}
+\item{Obtain estimate of high quality SNPs}
+\item{Transform SNPs into consistent values (e.g., MAF, Derived, Non-reference}
+\item{Normalize SNPs and phenotypes}
+\item{Estimate population structure and derive significant axes (Tracy-Widom
+test)}
+\item{Remove effect of population structure (via PCA) from both phenotype and 
+genotype}
+\item{Correlate residuals between genotype, phenotype}
+\item{Account for multiple testing}
+\end{enumerate}
+\end{block}
+\tiny
+\citep{Patterson:2006ki,Eckert:2010hd}
+\end{frame}
+
 
 \begin{frame}
 \frametitle{Bayenv: identifying correlations with ecological
@@ -289,7 +317,7 @@ variables}
 \item{Standardizing for unequal sampling variance and covariance 
 among populations}
 \begin{equation}
-X_l = C^-1 \frac{(\theta_l-\epsilon_l)}{\sqrt(\epsilon_l(1-\epsilon_l))}	
+X_l = C^{-1} \frac{(\theta_l-\epsilon_l)}{\sqrt(\epsilon_l(1-\epsilon_l))}	
 \end{equation}
 \item{Can be used to formulate a statistic that's like $F_ST$}
 \begin{equation}
@@ -368,7 +396,7 @@ How big must an outlier be? \citep{Kass:1995vb}.
 
 \begin{frame}
 \frametitle{Signatures of polygenic adaptation}
-\begin{block}{}
+\begin{block}{SQUAT}
 \centering
 \includegraphics[height=.8\textheight]{bc1.png}
 \end{block}
@@ -380,17 +408,7 @@ How big must an outlier be? \citep{Kass:1995vb}.
 \frametitle{Signatures of polygenic adaptation}
 \begin{block}{}
 \centering
-We will not be going through all of these equations
-\end{block}
-\tiny
-\citet[Figure 1]{Berg:2014bs}
-\end{frame}
-
-\begin{frame}
-\frametitle{Signatures of polygenic adaptation}
-\begin{block}{}
-\centering
-But...
+We will not be going through all of these equations, but . . .
 \end{block}
 \tiny
 \citet[Figure 1]{Berg:2014bs}
@@ -405,6 +423,29 @@ But...
 \item{hierfstat $\longrightarrow p$}
 \end{itemize}
 \end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Signatures of polygenic adaptation*}
+\begin{block}{Calculating alpha, given p and q}
+\centering
+\begin{equation}
+a = \frac{G_{AA} - G_{aa}}{2}	
+\end{equation}
+\begin{equation}
+d = G_{Aa} - \frac{G_{AA}+G{aa}}{2}	
+\end{equation}
+\begin{equation}
+\alpha_A = a_A + d_A(q-p)	
+\end{equation}
+\end{block}
+\tiny
+\citet{Cheverud:2015tc}
+\normalsize
+\begin{block}{Question}
+How many genotypic classes are represented  $a$ and $d$?
+\end{block}
+
 \end{frame}
 
 \begin{frame}
@@ -439,28 +480,7 @@ selection)}
 
 
 
-\begin{frame}
-\frametitle{Signatures of polygenic adaptation*}
-\begin{block}{Calculating alpha, given p and q}
-\centering
-\begin{equation}
-a = \frac{G_{AA} - G_{aa}}{2}	
-\end{equation}
-\begin{equation}
-d = G_{Aa} - \frac{G_{AA}+G{aa}}{2}	
-\end{equation}
-\begin{equation}
-\alpha_A = a_A + d_A(q-p)	
-\end{equation}
-\end{block}
-\tiny
-\citet{Cheverud:2015tc}
-\normalsize
-\begin{block}{Question}
-How many genotypic classes are represented  $a$ and $d$?
-\end{block}
 
-\end{frame}
 
 
 

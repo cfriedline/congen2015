@@ -30,3 +30,6 @@ auto
 *.txt
 squat
 slides/*.R
+*.ipynb_checkpoints
+*.nav
+*.snm
