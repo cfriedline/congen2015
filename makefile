@@ -10,6 +10,6 @@ texpad:
 scp_notebooks:
 	scp congen:/gdc_home5/groups/congenomics/day5/cfried/*.ipynb .
 
-.PHONY: slides
+.PHONY: slides texpad scp_notebooks
 
         
