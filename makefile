@@ -8,7 +8,7 @@ texpad:
 	latexmk -xelatex slides.tex
 
 scp_notebooks:
-	scp congen:~/ipython/*.ipynb .
+	scp congen:/gdc_home5/groups/congenomics/day5/cfried/*.ipynb .
 
 .PHONY: slides
 
